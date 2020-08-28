@@ -1,6 +1,6 @@
-### Front End Libraries Projects - Build a Markdown Previewer
+# Front End Libraries Projects - Build a Markdown Previewer
 
-# Chamodya Wimansha
+## Chamodya Wimansha
 
 **Objective**: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/GrZVVO.
 
