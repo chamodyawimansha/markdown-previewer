@@ -1,10 +1,17 @@
 var defaultText =
-  "# Welcome to my React Markdown Previewer! \n ## This is a sub-heading..." +
+  "# Welcome to my React Markdown Previewer! \n" +
+  "## This is a sub-heading... \n" +
   "### And here's some other cool stuff:\n" +
   "Heres some code, `<div></div>`, between 2 backticks.\n" +
-  "\n" +
   "```\n" +
   "// this is multi-line code:\n" +
+  "\n" +
+  "function anotherExample(firstLine, lastLine) {\n" +
+  "  if (firstLine == '```' && lastLine == '```') {\n" +
+  "    return multiLineCode;\n" +
+  "  }\n" +
+  "}\n" +
+  "```\n" +
   "\n" +
   "You can also make text **bold**... whoa!\n" +
   "Or _italic_.\n" +

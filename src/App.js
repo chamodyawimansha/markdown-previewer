@@ -20,7 +20,6 @@ class App extends Component {
     marked.setOptions({
       breaks: true,
     });
-
     this.setState({
       value: event.target.value,
       output: marked(event.target.value),
