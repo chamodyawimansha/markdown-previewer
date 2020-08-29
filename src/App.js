@@ -15,6 +15,15 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    marked.setOptions({
+      breaks: true,
+    });
+    this.setState({
+      output: marked(this.state.value),
+    });
+  }
+
   handleChange(event) {
     // set marked js options
     marked.setOptions({
