@@ -2,16 +2,25 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import marked from "marked";
+import text from "./defaultText";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: "", output: "" };
+    this.state = {
+      value: text,
+      output: "",
+    };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
+    // set marked js options
+    marked.setOptions({
+      breaks: true,
+    });
+
     this.setState({
       value: event.target.value,
       output: marked(event.target.value),
@@ -33,7 +42,7 @@ class App extends Component {
                   id="editor"
                   value={this.state.value}
                   onChange={this.handleChange}
-                />
+                ></textarea>
               </div>
             </div>
           </div>
@@ -43,7 +52,7 @@ class App extends Component {
                 <h5 className="card-title">Previewer</h5>
                 <div
                   id="preview"
-                  // dangerouslySetInnerHTML={{ __html: this.state.output }}
+                  dangerouslySetInnerHTML={{ __html: this.state.output }}
                 />
               </div>
             </div>
